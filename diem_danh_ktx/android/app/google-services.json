@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "9599427435",
+    "firebase_url": "https://diem-danh-ktx.firebaseio.com",
+    "project_id": "diem-danh-ktx",
+    "storage_bucket": "diem-danh-ktx.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:9599427435:android:a528236aca813658",
+        "android_client_info": {
+          "package_name": "com.example.diemdanhktx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "9599427435-jonpj96scb6lnjmfct6o0ev6q60oo343.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArqdg24gvtFt0EiyyZoln1dAx_LqAvn3c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
