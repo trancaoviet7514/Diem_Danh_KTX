@@ -3,14 +3,14 @@ import 'package:diem_danh_ktx/Activity/MainScreen.dart';
 import 'package:diem_danh_ktx/Model/User.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatefulWidget {
+class LoginScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return new LoginState();
   }
 }
 
-class LoginState extends State<LoginPage> {
+class LoginState extends State<LoginScreen> {
 
   static const MARGIN_PARENT = 30.0;
   BuildContext mContext;

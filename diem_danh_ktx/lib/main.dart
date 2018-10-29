@@ -1,3 +1,4 @@
+import 'package:diem_danh_ktx/Activity/LoginScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: "ahii",
-      home: new LoginPage()
+      home: new LoginScreen()
     );
   }
 
