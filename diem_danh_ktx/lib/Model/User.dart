@@ -14,5 +14,8 @@ class User {
   String get Password => _Password;
   set Password(String value) => _Password = value;
 
+  String toString(){
+    return _UserName + ' ' + _Password + ' ' + isAdmin.toString();
+  }
 
 }

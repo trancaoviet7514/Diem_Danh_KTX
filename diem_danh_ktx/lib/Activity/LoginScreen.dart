@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 class LoginScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
+    DataIO.getAllUser();
     return new LoginState();
   }
 }
@@ -14,8 +15,10 @@ class LoginState extends State<LoginScreen> {
 
   static const MARGIN_PARENT = 30.0;
   BuildContext mContext;
+  TextEditingController mUserNameController = TextEditingController();
+  TextEditingController mPasswordController = TextEditingController();
 
-  Widget buildEditText (String hint, bool obscure) {
+  Widget buildEditText (String hint, bool obscure, TextEditingController controller) {
     return new Container(
       decoration: new BoxDecoration(
         color: new Color.fromARGB(255, 240, 240, 240),
@@ -32,11 +35,7 @@ class LoginState extends State<LoginScreen> {
         keyboardType: TextInputType.text,
         autocorrect: false,
         obscureText: obscure,
-        onChanged: (text) {
-          setState(() {
-            DataIO.user.UserName = text;
-          });
-        },
+        controller: controller,
       ),
     );
   }
@@ -57,8 +56,8 @@ class LoginState extends State<LoginScreen> {
           new Container(
             margin: EdgeInsets.all(10.0),
           ),
-          buildEditText('User name',false),
-          buildEditText('Password', true),
+          buildEditText('User name',false, mUserNameController),
+          buildEditText('Password', true, mPasswordController),
           buildButtonLogin(context)
         ],
       ),
@@ -79,11 +78,14 @@ class LoginState extends State<LoginScreen> {
                 textColor: Colors.white,
                 child: new Text('Login'),
                 onPressed: () {
-                  DataIO.user = User('1512667','123',true);
-                  Navigator.push(
-                    mContext,
-                    MaterialPageRoute(builder: (context) => MainScreen()),
-                  );
+                  if (DataIO.VerifyAccount(mUserNameController.text, mPasswordController.text)) {
+                    Navigator.push(
+                      mContext,
+                      MaterialPageRoute(builder: (context) => MainScreen()),
+                    );
+                  } else {
+
+                  }
                 },
               )
           )
